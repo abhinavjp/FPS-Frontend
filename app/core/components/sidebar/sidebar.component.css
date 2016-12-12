@@ -1,0 +1,33 @@
+.sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #142331;
+    height: 100%;
+    width: 15%;
+}
+
+.nav-sidebar {
+    margin-right: -21px;
+    margin-bottom: 20px;
+    margin-left: -20px;
+    margin-top: -11px;
+}
+
+.nav>li>a:hover{
+    border-left: 3px solid #ffffff;
+    background-color: #060d13;
+    color: #ffffff;
+    padding-left: 12px;
+}
+
+.nav>li>a {
+    background-color: #142331;
+    color: #ffffff;
+}

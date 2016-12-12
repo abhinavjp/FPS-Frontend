@@ -8,7 +8,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+// Angular Imports
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var common_1 = require("@angular/common");
+// User Imports
+var core_helper_services_1 = require("./core-helper.services");
+var core_http_service_1 = require("./core-http.service");
+var core_config_service_1 = require("./core-config.service");
 var CoreModule = (function () {
     function CoreModule() {
     }
@@ -16,10 +23,17 @@ var CoreModule = (function () {
 }());
 CoreModule = __decorate([
     core_1.NgModule({
-        imports: [],
+        imports: [
+            common_1.CommonModule,
+            router_1.RouterModule
+        ],
         exports: [],
         declarations: [],
-        providers: [],
+        providers: [
+            core_http_service_1.CoreHttpService,
+            core_helper_services_1.CoreHelperService,
+            core_config_service_1.CoreConfigService
+        ],
     }),
     __metadata("design:paramtypes", [])
 ], CoreModule);

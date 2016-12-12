@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+// Angular Imports
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
@@ -16,9 +17,8 @@ var AppComponent = (function () {
 }());
 AppComponent = __decorate([
     core_1.Component({
-        selector: "ng-sample",
-        template: "\n        <div class=\"jumbotron\">\n            <h1>Welcome To NgSample2</h1>\n        </div>\n    ",
-        styles: ["\n        .jumbotron { box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2); }\n    "]
+        selector: 'ng-sample',
+        templateUrl: './app/app.component.html'
     }),
     __metadata("design:paramtypes", [])
 ], AppComponent);
