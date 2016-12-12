@@ -5,10 +5,9 @@ import { ResidentService } from './resident.service';
 
 @Injectable()
 export class ResidentListResolver implements Resolve<ResidentModel> {
-
     constructor(private residentService: ResidentService) { }
 
     resolve() {
-        return this.residentService.getResidentList();
+       return this.residentService.getResidentList();
     }
 }

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
+import { GridModule } from '@progress/kendo-angular-grid';
 // User Modules
 import { CoreModule } from './core/core.module';
 import { ResidentModule } from './resident/resident.module';
@@ -23,6 +24,7 @@ import { residentRouting } from './resident/resident.routing';
         ReactiveFormsModule,
         HttpModule,
         JsonpModule,
+        GridModule,
         CoreModule,
         residentRouting,
         appRouting,

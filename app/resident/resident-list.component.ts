@@ -1,12 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs/Rx';
+
+import { ResidentModel } from './resident.model';
 
 @Component({
     selector: 'resident-list',
     templateUrl: './app/resident/resident-list.component.html'
 })
 export class ResidentListComponent implements OnInit {
-    constructor() { }
+    residentList: ResidentModel[] = [];
+    constructor(private route: ActivatedRoute) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.residentList = <ResidentModel[]>this.route.snapshot.data['residentList'];
+     }
 }
 

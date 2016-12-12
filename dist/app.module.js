@@ -13,6 +13,7 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
+var kendo_angular_grid_1 = require("@progress/kendo-angular-grid");
 // User Modules
 var core_module_1 = require("./core/core.module");
 var resident_module_1 = require("./resident/resident.module");
@@ -38,6 +39,7 @@ AppModule = __decorate([
             forms_1.ReactiveFormsModule,
             http_1.HttpModule,
             http_1.JsonpModule,
+            kendo_angular_grid_1.GridModule,
             core_module_1.CoreModule,
             resident_routing_1.residentRouting,
             app_routing_1.appRouting,

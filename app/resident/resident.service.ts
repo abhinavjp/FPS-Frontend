@@ -12,14 +12,14 @@ export class ResidentService {
         this.residentApiUrl = this.coreConfigService.apiUrl + 'Resident/';
      }
 
-     getResidentList() {
+     getResidentList(){
          let requestUrl = this.residentApiUrl + 'GetList';
-         return this.coreHttpService.getRequest(requestUrl);
+         return this.coreHttpService.getRequest<ResidentModel[]>(requestUrl);
      }
 
      getResidentById(residentId: number) {
          let requestUrl = this.residentApiUrl + 'GetById';
-         return this.coreHttpService.getRequestWithParameters(requestUrl, { id: residentId });
+         return this.coreHttpService.getRequestWithParameters<{id: number}, ResidentModel[]>(requestUrl, { id: residentId });
      }
 
      createResident(resident: ResidentModel) {
