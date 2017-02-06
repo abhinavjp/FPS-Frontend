@@ -1,9 +1,12 @@
 <kendo-grid [data]="residentList">
-    <kendo-grid-column field="firstName" title="First Name" width="120">
+    <kendo-grid-column field="fullName" title="Full Name" width="250">
     </kendo-grid-column>
-    <kendo-grid-column field="middleName" title="Middle Name">
+    <kendo-grid-column field="mainContact" title="Main Contact" width="150">
     </kendo-grid-column>
-    <kendo-grid-column field="lastName" title="Last Name" width="230">
+    <kendo-grid-column field="onRent" title="Is Staying On Rent" width="230">
+        <template kendoCellTemplate let-dataItem>
+            <label>{{dataItem.onRent === true ? "Yes" : "No"}}</label>
+        </template>
     </kendo-grid-column>
     <!--<kendo-grid-column field="contactNumber1" title="Contact Number" width="120">
         <template kendoCellTemplate let-dataItem>
