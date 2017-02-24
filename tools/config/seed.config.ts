@@ -317,7 +317,7 @@ export class SeedConfig {
     { src: 'intl/dist/Intl.min.js', inject: 'shims' },
     { src: 'systemjs/dist/system.src.js', inject: 'shims', buildType: BUILD_TYPES.DEVELOPMENT },
     // Temporary fix. See https://github.com/angular/angular/issues/9359
-    { src: '.tmp/Rx.min.js', inject: 'libs', buildType: BUILD_TYPES.DEVELOPMENT },
+    { src: '.tmp/Rx.min.js', inject: 'libs', buildType: BUILD_TYPES.DEVELOPMENT }
   ];
 
   /**
@@ -325,8 +325,8 @@ export class SeedConfig {
    * @type {InjectableDependency[]}
    */
   APP_ASSETS: InjectableDependency[] = [
-    { src: `${this.NPM_BASE}bootstrap/dist/css/bootstrap.min.css`, inject: true, vendor: true },
-    { src: `${this.NPM_BASE}@progress/kendo-theme-default/dist/all.css`, inject: true, vendor: false }
+    // { src: `${this.NPM_BASE}bootstrap/dist/css/bootstrap.min.css`, inject: true, vendor: true },
+    // { src: `${this.NPM_BASE}@progress/kendo-theme-default/dist/all.css`, inject: true, vendor: false }
   ];
 
   /**
@@ -369,9 +369,9 @@ export class SeedConfig {
       '@angular/core/testing': 'node_modules/@angular/core/bundles/core-testing.umd.js',
       '@angular/http/testing': 'node_modules/@angular/http/bundles/http-testing.umd.js',
       '@angular/platform-browser/testing':
-        'node_modules/@angular/platform-browser/bundles/platform-browser-testing.umd.js',
+      'node_modules/@angular/platform-browser/bundles/platform-browser-testing.umd.js',
       '@angular/platform-browser-dynamic/testing':
-        'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js',
+      'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js',
       '@angular/router/testing': 'node_modules/@angular/router/bundles/router-testing.umd.js',
 
       '@progress/kendo-angular-grid': 'node_modules/@progress/kendo-angular-grid/dist/cdn/js/kendo-angular-grid.js',

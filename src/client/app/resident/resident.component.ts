@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'resident',
+    moduleId:module.id,
+    selector: 'resident-component',
     template: `<router-outlet></router-outlet>`
 })
 export class ResidentComponent implements OnInit {

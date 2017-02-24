@@ -1,4 +1,11 @@
 <kendo-grid [data]="residentList">
+    <kendo-grid-column title="Actions" width="230">
+        <template kendoCellTemplate let-dataItem>
+            <a routerLink="['/resident/update', dataItem.id]" routerLinkActive="active">
+                <i class="fa fa-pencil"></i>
+            </a>
+        </template>
+    </kendo-grid-column>
     <kendo-grid-column field="fullName" title="Full Name" width="250">
     </kendo-grid-column>
     <kendo-grid-column field="mainContact" title="Main Contact" width="150">

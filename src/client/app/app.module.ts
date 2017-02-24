@@ -4,22 +4,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 //import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularClass/hmr';
-import { GridModule } from '@progress/kendo-angular-grid';
 
 /*
  * Platform and Environment providers/directives/pipes
  */
 import { ENV_PROVIDERS } from './environment';
 import { appRouting } from './app.routing';
-import { residentRouting } from './resident/resident.routing';
 import { CoreModule } from './core/core.module';
 import { ResidentModule } from './resident/resident.module';
 // App is our top level component
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/components/header/header.component';
 import { SidebarComponent } from './core/components/sidebar/sidebar.component';
-import { ResidentComponent } from './resident/resident.component';
-import { ResidentListComponent } from './resident/resident-list.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 
@@ -43,25 +39,21 @@ type StoreType = {
   declarations: [
     HeaderComponent,
     SidebarComponent,
-    AppComponent,
-    ResidentComponent,
-    ResidentListComponent
+    AppComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,
-        FormsModule,
-        ReactiveFormsModule,
-        HttpModule,
-        JsonpModule,
-        GridModule,
-        CoreModule,
-        residentRouting,
-        appRouting,
-        ResidentModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpModule,
+    JsonpModule,
+    CoreModule,
+    appRouting,
+    ResidentModule
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
-    ENV_PROVIDERS,
-    APP_PROVIDERS
+    ...ENV_PROVIDERS,
+    ...APP_PROVIDERS
   ]
 })
 export class AppModule {

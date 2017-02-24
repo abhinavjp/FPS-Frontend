@@ -10,30 +10,30 @@ export class ResidentService {
     residentApiUrl: string;
     constructor(private coreConfigService: CoreConfigService, private coreHttpService: CoreHttpService) {
         this.residentApiUrl = this.coreConfigService.apiUrl + 'Resident/';
-     }
+    }
 
-     getResidentList(){
-         let requestUrl = this.residentApiUrl + 'GetList';
-         return this.coreHttpService.getRequest<ResidentModel>(requestUrl);
-     }
+    getResidentList() {
+        let requestUrl = this.residentApiUrl + 'GetList';
+        return this.coreHttpService.getRequest<ResidentModel[]>(requestUrl);
+    }
 
-     getResidentById(residentId: number) {
-         let requestUrl = this.residentApiUrl + 'GetById';
-         return this.coreHttpService.getRequestWithParameters<{id: number}, ResidentModel[]>(requestUrl, { id: residentId });
-     }
+    getResidentById(residentId: number) {
+        let requestUrl = this.residentApiUrl + 'GetById';
+        return this.coreHttpService.getRequestWithParameters<{ id: number }, ResidentModel>(requestUrl, { id: residentId });
+    }
 
-     createResident(resident: ResidentModel) {
-         let requestUrl = this.residentApiUrl + 'Create';
-         return this.coreHttpService.postRequest(requestUrl, resident);
-     }
+    createResident(resident: ResidentModel) {
+        let requestUrl = this.residentApiUrl + 'Create';
+        return this.coreHttpService.postRequest(requestUrl, resident);
+    }
 
-     updateResident(resident: ResidentModel) {
-         let requestUrl = this.residentApiUrl + 'Update';
-         return this.coreHttpService.postRequest(requestUrl, resident);
-     }
+    updateResident(resident: ResidentModel) {
+        let requestUrl = this.residentApiUrl + 'Update';
+        return this.coreHttpService.postRequest(requestUrl, resident);
+    }
 
-     deleteResident(residentId: number) {
-         let requestUrl = this.residentApiUrl + 'Delete';
-         return this.coreHttpService.postRequest(requestUrl, residentId);
-     }
+    deleteResident(residentId: number) {
+        let requestUrl = this.residentApiUrl + 'Delete';
+        return this.coreHttpService.postRequest(requestUrl, residentId);
+    }
 }

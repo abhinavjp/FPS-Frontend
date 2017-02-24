@@ -12,11 +12,12 @@
 
 <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
     <ul class="nav flex-column">
-        <li class="nav-item">
-            <a class="nav-link" routerLink="/resident/list" routerLinkActive="active">Residents</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Apartments</a>
+        <li class="nav-item" *ngFor="let navItem of nav">
+            <a class="nav-link" [routerLink]="navItem.link" 
+            routerLinkActive="active" 
+            [routerLinkActiveOptions]="{exact: navItem.exact}">
+                {{navItem.name}}
+                </a>
         </li>
     </ul>
 </nav>

@@ -10,7 +10,10 @@ import { SeedConfig } from './seed.config';
 export class ProjectConfig extends SeedConfig {
 
   PROJECT_TASKS_DIR = join(process.cwd(), this.TOOLS_DIR, 'tasks', 'project');
-
+  FONTS_DEST = `${this.APP_DEST}/fonts`;
+  FONTS_SRC = [
+    'node_modules/font-awesome/fonts/**'
+  ];
   constructor() {
     super();
     // this.APP_TITLE = 'Put name of your app here';
@@ -21,6 +24,10 @@ export class ProjectConfig extends SeedConfig {
     // Add `NPM` third-party libraries to be injected/bundled.
     this.NPM_DEPENDENCIES = [
       ...this.NPM_DEPENDENCIES,
+      { src: '@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js', inject: 'libs' },
+      { src: 'bootstrap/dist/css/bootstrap.min.css', inject: true },
+      { src: '@progress/kendo-theme-default/dist/all.css', inject: true },
+      { src: 'font-awesome/css/font-awesome.css', inject: true }
       // {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
       // {src: 'lodash/lodash.min.js', inject: 'libs'},
     ];

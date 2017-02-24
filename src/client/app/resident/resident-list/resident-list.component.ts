@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 
-import { ResidentModel } from './resident.model';
+import { ResidentModel } from '../resident.model';
 
 @Component({
+    moduleId: module.id,
     selector: 'resident-list',
-    templateUrl: './app/resident/resident-list.component.html'
+    templateUrl: 'resident-list.component.html'
 })
 export class ResidentListComponent implements OnInit {
     residentList: ResidentModel[] = [];

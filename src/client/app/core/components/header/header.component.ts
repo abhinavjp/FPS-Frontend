@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
+    moduleId:module.id,
     selector: 'app-header',
-    templateUrl: './app/core/components/header/header.component.html',
-    styleUrls: ['./app/core/components/header/header.component.css']
+    templateUrl: 'header.component.html',
+    styleUrls: ['header.component.css']
 })
 export class HeaderComponent implements OnInit {
     constructor() { }
