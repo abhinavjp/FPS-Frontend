@@ -10,11 +10,11 @@ import { ResidentCreateComponent } from './resident-manage/resident-create.compo
 
 const residentRoutes: Routes = [
     {
-        path: 'resident',
+        path: `resident`,
         component: ResidentComponent,
         children: [
             {
-                path: 'list',
+                path: `list`,
                 component: ResidentListComponent,
                 resolve: {
                     residentList: ResidentListResolver
@@ -28,7 +28,7 @@ const residentRoutes: Routes = [
             //     }
             // },
             {
-                path: 'update?:residentId',
+                path: `update/:residentId`,
                 component: ResidentUpdateComponent,
                 resolve: {
                     residentData: ResidentUpdateResolver

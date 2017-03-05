@@ -7,11 +7,13 @@ import { ResidentListResolver } from './resident-list/resident-list.resolves';
 import { ResidentService } from './resident.service';
 import { NgModule } from '@angular/core';
 import { GridModule } from '@progress/kendo-angular-grid';
+//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
     imports: [
         residentRouting,
-        GridModule
+        GridModule,
+        //NgbModule.forRoot()
     ],
     exports: [
         ResidentListComponent,

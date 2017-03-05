@@ -374,8 +374,8 @@ export class SeedConfig {
       'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js',
       '@angular/router/testing': 'node_modules/@angular/router/bundles/router-testing.umd.js',
 
-      '@progress/kendo-angular-grid': 'node_modules/@progress/kendo-angular-grid/dist/cdn/js/kendo-angular-grid.js',
-
+      // '@progress/kendo-angular-grid': 'node_modules/@progress/kendo-angular-grid/dist/cdn/js/kendo-angular-grid.js',
+      // '@ng-bootstrap/ng-bootstrap': 'node_modules/@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js',
       'app/*': '/app/*',
       // For test config
       'dist/dev/*': '/base/dist/dev/*',
@@ -401,7 +401,9 @@ export class SeedConfig {
     base: this.PROJECT_ROOT,
     packageConfigPaths: [
       join('node_modules', '*', 'package.json'),
-      join('node_modules', '@angular', '*', 'package.json')
+      join('node_modules', '@angular', '*', 'package.json'),
+      join('node_modules', '@progress', '*', 'package.json'),
+      join('node_modules', '@ng-bootstrap', '*', 'package.json')
     ],
     paths: {
       // Note that for multiple apps this configuration need to be updated

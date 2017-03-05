@@ -1,3 +1,4 @@
+import { ExtendPackages } from './seed.config.interfaces';
 import { join } from 'path';
 
 import { SeedConfig } from './seed.config';
@@ -16,20 +17,30 @@ export class ProjectConfig extends SeedConfig {
   ];
   constructor() {
     super();
-    // this.APP_TITLE = 'Put name of your app here';
+    this.APP_TITLE = 'Pro-Vision';
+    let additionalPackages: ExtendPackages[] = [{
+      name: '@ng-bootstrap/ng-bootstrap',
+      // Path to the package's bundle
+      path: 'node_modules/@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js'
+    },{
+      name: '@progress/kendo-angular-grid',
+      // Path to the package's bundle
+      path: 'node_modules/@progress/kendo-angular-grid/dist/cdn/js/kendo-angular-grid.js'
+    }
+    ];
 
+     this.addPackagesBundles(additionalPackages);
     /* Enable typeless compiler runs (faster) between typed compiler runs. */
     // this.TYPED_COMPILE_INTERVAL = 5;
 
     // Add `NPM` third-party libraries to be injected/bundled.
     this.NPM_DEPENDENCIES = [
       ...this.NPM_DEPENDENCIES,
-      { src: '@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js', inject: 'libs' },
       { src: 'bootstrap/dist/css/bootstrap.min.css', inject: true },
       { src: '@progress/kendo-theme-default/dist/all.css', inject: true },
-      { src: 'font-awesome/css/font-awesome.css', inject: true }
-      // {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
-      // {src: 'lodash/lodash.min.js', inject: 'libs'},
+      { src: 'font-awesome/css/font-awesome.css', inject: true },
+      {src: '@progress/kendo-angular-grid/dist/cdn/js/kendo-angular-grid.js', inject: 'libs'},
+      {src: '@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js', inject: 'libs'},
     ];
 
     // Add `local` third-party libraries to be injected/bundled.

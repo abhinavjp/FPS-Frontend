@@ -8,6 +8,6 @@ export class ResidentUpdateResolver implements Resolve<ResidentModel> {
     constructor(private residentService: ResidentService) { }
 
     resolve(route: ActivatedRouteSnapshot) {
-       return this.residentService.getResidentById(route.params['residentId']);
+       return this.residentService.getResidentById(route.params["residentId"]);
     }
 }
