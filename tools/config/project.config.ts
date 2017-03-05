@@ -22,14 +22,14 @@ export class ProjectConfig extends SeedConfig {
       name: '@ng-bootstrap/ng-bootstrap',
       // Path to the package's bundle
       path: 'node_modules/@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js'
-    },{
+    }, {
       name: '@progress/kendo-angular-grid',
       // Path to the package's bundle
       path: 'node_modules/@progress/kendo-angular-grid/dist/cdn/js/kendo-angular-grid.js'
     }
     ];
 
-     this.addPackagesBundles(additionalPackages);
+    this.addPackagesBundles(additionalPackages);
     /* Enable typeless compiler runs (faster) between typed compiler runs. */
     // this.TYPED_COMPILE_INTERVAL = 5;
 
@@ -39,8 +39,8 @@ export class ProjectConfig extends SeedConfig {
       { src: 'bootstrap/dist/css/bootstrap.min.css', inject: true },
       { src: '@progress/kendo-theme-default/dist/all.css', inject: true },
       { src: 'font-awesome/css/font-awesome.css', inject: true },
-      {src: '@progress/kendo-angular-grid/dist/cdn/js/kendo-angular-grid.js', inject: 'libs'},
-      {src: '@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js', inject: 'libs'},
+      { src: '@progress/kendo-angular-grid/dist/cdn/js/kendo-angular-grid.js', inject: 'libs' },
+      { src: '@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js', inject: 'libs' },
     ];
 
     // Add `local` third-party libraries to be injected/bundled.
