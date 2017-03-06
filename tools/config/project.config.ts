@@ -26,6 +26,10 @@ export class ProjectConfig extends SeedConfig {
       name: '@progress/kendo-angular-grid',
       // Path to the package's bundle
       path: 'node_modules/@progress/kendo-angular-grid/dist/cdn/js/kendo-angular-grid.js'
+    }, {
+      name: 'ng2-toastr/ng2-toastr',
+      // Path to the package's bundle
+      path: 'node_modules/ng2-toastr/ng2-toastr.js'
     }
     ];
 
@@ -41,6 +45,7 @@ export class ProjectConfig extends SeedConfig {
       { src: 'font-awesome/css/font-awesome.css', inject: true },
       { src: '@progress/kendo-angular-grid/dist/cdn/js/kendo-angular-grid.js', inject: 'libs' },
       { src: '@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js', inject: 'libs' },
+      { src: 'ng2-toastr/ng2-toastr.js', inject: 'libs' }
     ];
 
     // Add `local` third-party libraries to be injected/bundled.

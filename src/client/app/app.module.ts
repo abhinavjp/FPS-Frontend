@@ -37,8 +37,6 @@ type StoreType = {
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    HeaderComponent,
-    SidebarComponent,
     AppComponent
   ],
   imports: [ // import Angular's modules

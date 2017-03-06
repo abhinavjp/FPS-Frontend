@@ -403,7 +403,8 @@ export class SeedConfig {
       join('node_modules', '*', 'package.json'),
       join('node_modules', '@angular', '*', 'package.json'),
       join('node_modules', '@progress', '*', 'package.json'),
-      join('node_modules', '@ng-bootstrap', '*', 'package.json')
+      join('node_modules', '@ng-bootstrap', '*', 'package.json'),
+      join('node_modules', 'ng2-toastr', '*', 'package.json')
     ],
     paths: {
       // Note that for multiple apps this configuration need to be updated

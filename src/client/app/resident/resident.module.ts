@@ -1,3 +1,5 @@
+import { CoreModule } from '../core/core.module';
+import { ToasterService } from '../core/services/toaster.service';
 import { ResidentUpdateResolver } from './resident-manage/resident-update.resolves';
 import { ResidentUpdateComponent } from './resident-manage/resident-update.component';
 import { residentRouting } from './resident.routing';
@@ -6,14 +8,16 @@ import { ResidentListComponent } from './resident-list/resident-list.component';
 import { ResidentListResolver } from './resident-list/resident-list.resolves';
 import { ResidentService } from './resident.service';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GridModule } from '@progress/kendo-angular-grid';
-//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
     imports: [
         residentRouting,
         GridModule,
-        //NgbModule.forRoot()
+        CoreModule,
+        FormsModule,
+        ReactiveFormsModule
     ],
     exports: [
         ResidentListComponent,
@@ -28,7 +32,8 @@ import { GridModule } from '@progress/kendo-angular-grid';
     providers: [
         ResidentService,
         ResidentUpdateResolver,
-        ResidentListResolver
+        ResidentListResolver,
+        ToasterService
     ],
 })
 export class ResidentModule { }

@@ -1,2 +1,46 @@
-<form>
-</form>
+<div>
+    <form [formGroup]="residentManageForm" (submit)="saveResident()">
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" formControlName="firstName" />
+        </div>
+        <div class="form-group">
+            <label for="middleName">Middle Name</label>
+            <input type="text" class="form-control" id="middleName" formControlName="middleName" />
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" formControlName="lastName" />
+        </div>
+        <div class="form-group">
+            <label for="contactNumber1">Contact Number 1</label>
+            <input type="text" class="form-control" id="contactNumber1" formControlName="contactNumber1" />
+        </div>
+        <div class="form-group">
+            <label for="contactNumber2">Contact Number 2</label>
+            <input type="text" class="form-control" id="contactNumber2" formControlName="contactNumber2" />
+        </div>
+        <div class="form-group">
+            <label for="contactNumber3">Contact Number 3</label>
+            <input type="text" class="form-control" id="contactNumber3" formControlName="contactNumber3" />
+        </div>
+        <div class="form-group">
+            <label for="membersLiving">Members Living</label>
+            <input type="number" class="form-control" id="membersLiving" formControlName="membersLiving" />
+        </div>
+        <div class="form-group">
+            <label for="livingStart">Started Living On</label>
+            <input type="date" class="form-control" id="livingStart" formControlName="livingStart" />
+        </div>
+        <div class="form-group">
+            <label for="livingEnd">Leaving Date</label>
+            <input type="text" class="form-control" id="livingEnd" formControlName="livingEnd" />
+        </div>
+        <div class="form-group">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" id="onRent" formControlName="onRent" />On Rent
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
